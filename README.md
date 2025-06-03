@@ -12,11 +12,23 @@
 
 - Entrar a la carpeta de articulos con "cd Article-Extractor/"
 
-- para ejecutar el codigo y ver la resolucion utiliza "python3 main.py"
+- Crear un entorno virtual con "python3 -m venv venv"
+
+- Entrar al entorno virtual con "source venv/bin/activate"
+
+- Instalar las dependencias con "pip install newspaper3k" y tambien instalar "pip install lxml_html_clean"
+
+- Para ejecutar el codigo y ver la resolucion utiliza "python3 main.py"
 
 
 # Prices Extractor
 
 - Entrar a la carpeta de precios con "cd Prices-Extractor/"
 
--  para ejecutar el codigo y ver la resolucion utiliza "python3 main.py"
+- Crear un entorno virtual con "python3 -m venv venv"
+
+- Entrar al entorno virtual con "source venv/bin/activate"
+
+- Instalar las dependencias con "" y tambien instalar ""
+
+- Para ejecutar el codigo y ver la resolucion utiliza "python3 main.py"

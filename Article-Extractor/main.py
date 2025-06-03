@@ -1,22 +1,24 @@
-import requests
-from bs4 import BeautifulSoupimport pandas as pd
+from newspaper import Article
+import csv
 
-# URL del artículo
+def extract_and_save(url, filename='articles.csv'):
+    article = Article(url)
+    article.download()
+    article.parse()
+   
+    data = [
+        {'field': 'Titulo', 'value': article.title},
+        {'field': 'Autor', 'value': ' : '.join(article.authors)},
+        {'field': 'Fecha_publicacion', 'value': article.publish_date},
+        {'field': 'Contenido', 'value': article.text.replace('\n', ' ')}
+    ]
+   
+    with open(filename, mode='a', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file, delimiter=':')
+        for item in data:
+            writer.writerow([item['field'], item['value']])
+        writer.writerow([])
 
-url = 'https://tn.com.ar/politica/2025/03/11/temporal-en-bahia-blanca-la-justicia-recibio-mas-de-200-llamados-por-personas-incomunicadas/'
-
-response = requests.get(url)
-
-soup = BeautifulSoup(response.content, 'html.parser')
-
-article_content = soup.find('article')
-
-if article_content:    
-	article_text = article_content.get_text(strip=True)
-else:    
-	article_text = "No se encontró contenido de artículo."
-
-df = pd.DataFrame({'Article Content': [article_text]})
-
-print(df)
-
+urls = ['https://tn.com.ar/']
+for url in urls:
+    extract_and_save(url)

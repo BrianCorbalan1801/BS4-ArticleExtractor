@@ -20,6 +20,8 @@
 
 - Para ejecutar el codigo y ver la resolucion utiliza "python3 main.py"
 
+- Para salir del entorno virtual pon "deactivate"
+
 
 # Prices Extractor
 
@@ -29,6 +31,8 @@
 
 - Entrar al entorno virtual con "source venv/bin/activate"
 
-- Instalar las dependencias con "" y tambien instalar ""
+- Instalar las dependencias con "pip install requests" y tambien instalar "pip install beautifulsoup4 pandas"
 
 - Para ejecutar el codigo y ver la resolucion utiliza "python3 main.py"
+
+- Para salir del entorno virtual pon "deactivate"

@@ -22,7 +22,6 @@
 
 - Para salir del entorno virtual pon "deactivate"
 
-
 # Prices Extractor
 
 - Entrar a la carpeta de precios con "cd Prices-Extractor/"
@@ -31,7 +30,7 @@
 
 - Entrar al entorno virtual con "source venv/bin/activate"
 
-- Instalar las dependencias con "pip install requests" y tambien instalar "pip install beautifulsoup4 pandas"
+- Instalar las dependencias con "pip install selenium" y tambien instalar "pip install pandas"
 
 - Para ejecutar el codigo y ver la resolucion utiliza "python3 main.py"
 
